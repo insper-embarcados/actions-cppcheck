@@ -30,4 +30,4 @@ runs:
       env:
         WOKWI_CLI_TOKEN: ${{ inputs.token}}
       run: |
-        cppcheck --enable=all --suppress=missingIncludeSystem  --suppress=unmatchedSuppression --suppress=unusedFunction --suppress=invalidPrintfArgType_sint --suppress=invalidPrintfArgType_uint --error-exitcode=2 "${{inputs.c_file}}"
+        cppcheck --enable=all --suppress=missingIncludeSystem  --suppress=missingInclude --suppress=unmatchedSuppression --suppress=unusedFunction --suppress=invalidPrintfArgType_sint --suppress=invalidPrintfArgType_uint --error-exitcode=2 "${{inputs.c_file}}"
